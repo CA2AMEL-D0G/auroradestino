@@ -1,0 +1,67 @@
+:root{
+--azul:#5371fe
+
+
+}
+body{
+    margin: auto;
+    background-color: lightgray;
+}
+
+header{
+
+    height: 200px;
+   
+    
+    
+
+ border-bottom: solid 10px var(--azul);
+
+
+
+    background-color: rgb(163, 163, 163);
+
+  display: flex;
+  align-items: center;
+}
+
+figure{
+
+width: 300px;
+height: 400px;
+
+background-color: white;
+
+ border: solid 5px var(--azul);
+ border-radius: 30px;
+
+flex-shrink: 0;
+}
+
+#maindiv{
+display: flex;
+justify-content: center;
+
+
+}
+#mainbutton{
+
+background-color: orange;
+border-radius: 10px;
+border-color: rgba(0, 0, 0, 0);
+width: 200px;
+height: 60px;
+
+color: white;
+margin: 0 auto;  
+font-size: 30px;
+
+
+   
+    position: relative;
+    left: 50%;
+    
+    transform: translate(-50%,0% 
+    );
+
+}
