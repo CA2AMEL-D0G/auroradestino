@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headerplaceholder").innerHTML = data;
+  });
+</script>
+<body>
+    <div id="headerplaceholder"></div>  
+    
+    <main>
+
+
+        <div class="maindiv">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+
+
+
+        </div>
+<button id="mainbutton" onclick="window.location.href='pacotes.html'" >Ver Mais</button>
+
+    </main>
+    
+
+
+
+    
+</body>
+</html>

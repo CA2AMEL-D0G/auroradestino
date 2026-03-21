@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<script>
+fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("headerplaceholder").innerHTML = data;
+  });
+</script>
+<body>
+
+    <div id="headerplaceholder"></div>     
+    
+    <main id="mainformulario">
+
+
+        <h1>contate nos!</h1>
+
+        <form action="" method="get">
+
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome">
+    <br> <br>
+        <label for="numero de telefone">Numero de telefone</label>
+    <input type="text" name="numero de telefone" id="numero de telefone">
+        <br> <br>
+        <label for="destino">Destino</label>
+    <input type="text" name="destino" id="destino">
+
+        </form>
+       
+
+    </main>
+    
+
+
+
+    
+</body>
+</html>
