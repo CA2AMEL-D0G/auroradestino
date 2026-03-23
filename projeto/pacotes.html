@@ -1,95 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Packages</title>
- <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contato.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes</title>
+      <meta name="author" content="Daniel Schons Castro,Thomas uriel dos Santos Soares: softec">
+    <meta name="description" content="pagina de pacotes,confira nossos pacotes por um preço acessivel">
+    <meta name="keywords" content="pacotes, serviços, ofertas, viagens, produtos">
 
-    .hero {
-      height: 100vh;
-      background: url('img/mountains.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 40px;
-    }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      width: 280px;
-      padding: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
 
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 15px;
-    }
 
-    .location {
-      font-size: 14px;
-      color: #777;
-      margin-top: 10px;
-    }
+    <link rel="stylesheet" href="css/style.css">
 
-    .title {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
 
-    .desc {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-weight: bold;
-      color: #0d6efd;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      display: block;
-      text-align: center;
-      padding: 10px;
-      background: #6f42c1;
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-
-  </style>
 </head>
+
 <body>
+
+
 <div id="header"></div>
-<div class="hero">
-  <div class="card">
-    <img src="img/hotel.jpg" alt="Hotel">
-    <div class="location">USA / New York</div>
-    <div class="title">Hotel Paradise Montreal</div>
-    <div class="desc">A perfect stay with an amazing view.</div>
-    <div class="price">$120 / night</div>
-    <a href="#" class="btn">Book now</a>
-  </div>
-</div>
+
+<main>
+    <h1 style="text-align:center; margin-top:50px;">Pacotes</h1>
+    <div class="maindiv">
+        <article  class="pacotearticle" >
+          
+          <img class="pacoteimage" src="img/disneilandia.png" alt="imagem da disneylandia">
+        <h2>disneylandia</h2>
+        
+         <p class="nightstag">3 dias e 2 noites</p>
+        <p class="preco">12000</p>
+          <button class="pacotebtn">contate nos!</button>
+        
+        </article >
+        <article  class="pacotearticle" >
+          
+
+          <img class="pacoteimage" src="img/euquerochuu.webp" alt="imagem da nova iorque">
+       <h2>nova iorque</h2>
+        
+        
+        <p class="preco">12000</p>
+          
+       
+        <p></p>
+
+          <button class="pacotebtn">contate nos!</button>
+        
+        </article >
+        <article  class="pacotearticle" >
+         
+
+          <img class="pacoteimage" src="img/canada.webp" alt="imagem do canada">
+       <h2>Canada</h2>
+         <p></p>
+
+        
+        <p class="preco">12000</p>
+       
+          <button class="pacotebtn">contate nos!</button>
+        
+        </article>
+    </div>
+
+
+
+
+    </main>
+
+
 <script>
 fetch("header.html")
   .then(res => res.text())
