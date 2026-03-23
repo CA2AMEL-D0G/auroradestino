@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes</title>
+
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
 </head>
+
 <body>
-    <header>
-        <img src="" alt="">
-    </header>      
-    
-    <main>
 
 
+<div id="header"></div>
 
-    </main>
-    
+<main>
+    <h1 style="text-align:center; margin-top:50px;">Pacotes</h1>
+</main>
 
 
-
-
-
-    
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
 </body>
 </html>

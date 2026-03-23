@@ -1,47 +1,66 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contato.css">
 </head>
-<script>
-fetch("header.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("headerplaceholder").innerHTML = data;
-  });
-</script>
+
 <body>
 
-    <div id="headerplaceholder"></div>     
-    
-    <main id="mainformulario">
+<!-- HEADER AUTOMÁTICO -->
+<div id="header"></div>
 
+<section class="hero">
 
-        <h1>contate nos!</h1>
+  <div class="overlay"></div>
 
-        <form action="" method="get">
+  <div class="content">
 
+    <div class="left">
+      <p>Gostaríamos muito de ouvir de você!</p>
+      <h1>Contate-nos</h1>
 
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome">
-    <br> <br>
-        <label for="numero de telefone">Numero de telefone</label>
-    <input type="text" name="numero de telefone" id="numero de telefone">
-        <br> <br>
-        <label for="destino">Destino</label>
-    <input type="text" name="destino" id="destino">
+      <div class="grid">
+        <input type="email" placeholder="Digite seu email">
+        <input type="text" placeholder="Seu nome">
+        <input type="text" placeholder="Seu endereço">
+        <input type="text" placeholder="Seu telefone">
+      </div>
 
-        </form>
-       
+      <textarea placeholder="Digite sua mensagem"></textarea>
 
-    </main>
-    
+      <button>ENVIAR</button>
+    </div>
 
+    <div class="right">
+      <div class="card">
+        <h3>📞 LIGUE PARA NÓS</h3>
+        <p>1 (234) 567-891</p>
 
+        <h3>📍 LOCALIZAÇÃO</h3>
+        <p>Nova York, NY</p>
 
-    
+        <h3>⏰ HORÁRIO</h3>
+        <p>Seg – Sex: 10h – 20h</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+
 </body>
 </html>
