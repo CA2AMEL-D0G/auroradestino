@@ -94,3 +94,26 @@ figure figcaption {
 #mainformulario {
     background-color: rgb(80, 80, 80);
 }
+
+
+
+.pacotefigure{
+
+    position: relative;
+
+}
+.pacoteimage{
+    width: 80%;
+
+
+}
+.pacotebtn{
+    width: 80%;
+background-color: purple;
+
+left: 0%;
+bottom: 0%;
+position:absolute;
+border-radius: 10px;
+color: white;
+}
