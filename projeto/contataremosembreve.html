@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+<meta name="author" content="Daniel Schons Castro,Thomas uriel dos Santos Soares: softec">
+    <meta name="description" content="contate nos para saber mais informaçoes e agendar sua viagem">
+    <meta name="keywords" content="pacotes, serviços, ofertas, viagens, produtos">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contato.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="center">
+
+    
+
+    <h1>obrigado por nos contatar</h1>
+    <br>
+<br>
+    <aside>enviaremos uma mensagem em breve</aside>
+  </div>
+
+</section>
+
+<script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+</script>
+
+</body>
+</html>

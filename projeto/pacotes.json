@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Disneylandia",
+      "image": "img/disneilandia.png",
+      "alt": "imagem da disneylandia",
+      "rating": 8.6,
+      "duration": "3 dias e 2 noites",
+      "price": 12000
+      
+    },
+    {
+      "name": "Nova Iorque",
+      "image": "img/novaiorque.png",
+      "alt": "imagem da nova iorque",
+      "rating": 7.9,
+      "duration": "7 dias e 6 noites",
+      "price": 12000
+      
+    },
+    {
+      "name": "Canada",
+      "image": "img/canada.webp",
+      "alt": "imagem do canada",
+      "rating": 9.9,
+      "duration": "6 dias e 5 noites",
+      "price": 12000
+      
+    },
+     {
+      "name": "Paris",
+      "image": "img/paris.png",
+      "alt": "imagem de paris",
+      "rating": 9.2,
+      "duration": "5 dias e 4 noites",
+      "price": 13500
+    },
+    {
+      "name": "Londres",
+      "image": "img/londres.png",
+      "alt": "imagem de londres",
+      "rating": 8.9,
+      "duration": "5 dias e 4 noites",
+      "price": 12800
+    },
+    {
+      "name": "Tóquio",
+      "image": "img/tokyo.png",
+      "alt": "imagem de tóquio",
+      "rating": 5.5,
+      "duration": "7 dias e 6 noites",
+      "price": 14500
+    }
+
+
+
+
+
+
+  ]

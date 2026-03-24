@@ -10,7 +10,7 @@
 
 
 
-
+    <link rel="stylesheet" href="css/pacotes.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -24,44 +24,7 @@
 <main>
     <h1 style="text-align:center; margin-top:50px;">Pacotes</h1>
     <div class="maindiv">
-        <article  class="pacotearticle" >
-          
-          <img class="pacoteimage" src="img/disneilandia.png" alt="imagem da disneylandia">
-        <h2>disneylandia</h2>
-        
-         <p class="nightstag">3 dias e 2 noites</p>
-        <p class="preco">12000</p>
-          <button class="pacotebtn">contate nos!</button>
-        
-        </article >
-        <article  class="pacotearticle" >
-          
-
-          <img class="pacoteimage" src="img/euquerochuu.webp" alt="imagem da nova iorque">
-       <h2>nova iorque</h2>
-        
-        
-        <p class="preco">12000</p>
-          
-       
-        <p></p>
-
-          <button class="pacotebtn">contate nos!</button>
-        
-        </article >
-        <article  class="pacotearticle" >
-         
-
-          <img class="pacoteimage" src="img/canada.webp" alt="imagem do canada">
-       <h2>Canada</h2>
-         <p></p>
-
-        
-        <p class="preco">12000</p>
-       
-          <button class="pacotebtn">contate nos!</button>
-        
-        </article>
+      
     </div>
 
 
@@ -76,6 +39,104 @@ fetch("header.html")
   .then(data => {
     document.getElementById("header").innerHTML = data;
   });
+
+
+
+
+
+fetch("card.html")
+  .then(response => response.text()).then(
+
+  card =>{
+
+    fetch("pacotes.json")
+  .then(response => response.json())
+  .then(cardsValues => {
+    let container= document.getElementsByClassName("maindiv")[0]
+    console.log(cardsValues)
+    
+    
+    cardsValues.forEach(element => {
+
+
+
+      container.innerHTML+=card
+
+      
+      
+    })
+
+    
+    for(var index = 0; index< cardsValues.length; index++){
+  
+      
+    var img = document.getElementsByClassName('pacoteimage')[index];
+    var name = document.getElementsByClassName('pacotenome')[index];
+    var rating = document.getElementsByClassName('ratingbadge')[index];
+    var duration = document.getElementsByClassName('durationbadge')[index];
+    var price = document.getElementsByClassName('preco')[index];
+    var btn = document.getElementsByClassName('pacotebtn')[index];
+    if (img) {
+        img.src = cardsValues[index].image;
+        img.alt = cardsValues[index].alt;
+    }
+    
+    if (name) {
+        name.textContent = cardsValues[index].name;
+    }
+    
+    if (rating) {
+        rating.textContent =  + cardsValues[index].rating;
+      let redAmount = 255 -(cardsValues[index].rating - 5) * 51;
+      let greenAmount =  (cardsValues[index].rating * 51);
+        rating.style.backgroundColor= "rgb("+redAmount+","+greenAmount+",0)"
+    }
+    
+    if (duration) {
+        duration.textContent =  cardsValues[index].duration;
+    }
+      
+    if (price){
+      price.textContent = cardsValues[index].price
+
+
+    }
+    if (btn) {
+        btn.onclick = (function(nomePacote) {
+            return function() {
+                window.location.href = `contatenos.html?pacote=${encodeURIComponent(nomePacote)}`;
+            };
+        })(cardsValues[index].name);
+    }
+    
+    
+      
+      
+
+
+
+
+    }
+
+
+
+  })
+  }
+  )
+
+
+function senddata(botao, pacoteData) {
+    // Construir a URL com os parâmetros GET
+    
+    
+    // Redirecionar para a página de contato com os parâmetros
+    window.location.href = `contatenos.html?nome=`+pacoteData.name;
+}
+
+
+
+
+  
 </script>
 </body>
 </html>
