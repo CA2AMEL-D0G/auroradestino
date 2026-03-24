@@ -23,7 +23,7 @@
 
   <div class="content">
 
-    <form class="left" method="GET" action="contataremosembreve.html">
+    <form class="left" method="GET" action="contataremosembreve.html"> <!--  subistituir por recievedata.php  -->
   <p>Gostaríamos muito de ouvir de você!</p>
   <h1>Contate-nos</h1>
 
@@ -102,7 +102,7 @@
 </section>
 
 <script>
-fetch("header.html")
+fetch("header.txt")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
@@ -116,10 +116,10 @@ fetch("header.html")
 const urlParams = new URLSearchParams(window.location.search);
 const nomePacote = urlParams.get('pacote');
   
-
+if (nomePacote != null){
 
 document.getElementById("message").textContent = "eu estou interessado no pacote "+nomePacote
-
+}
   ;
 </script>
 

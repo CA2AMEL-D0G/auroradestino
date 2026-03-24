@@ -16,6 +16,10 @@
 
 <body>
 
+
+<div id="header"></div>
+
+
 <div class="maindiv">
     <article>
         <h2>Bem-vindo à Aurora Destinos</h2>
@@ -40,7 +44,7 @@
 </main>
 
 <script>
-fetch("header.html")
+fetch("header.txt")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
